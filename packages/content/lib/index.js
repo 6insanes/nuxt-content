@@ -183,7 +183,8 @@ module.exports = async function (moduleOptions) {
   /* istanbul ignore if */
   if (isSSG) {
     // Create a hash to fetch the database
-    const dbHash = hash(JSON.stringify(database.items._data)).substr(0, 8)
+    // const dbHash = hash(JSON.stringify(database.items._data)).substr(0, 8)
+    const dbHash = 'disabled'
     // Pass the hash to the publicRuntimeConfig to be used in client side
     if (this.options.publicRuntimeConfig) {
       this.options.publicRuntimeConfig.content = { dbHash }
